@@ -7,6 +7,6 @@ const levels = ['easy', 'medium', 'hard'];
 function addGenre() {
     const column = document.createElement('div')
     column.classList.add('genre-column')
-    column.innerHTMl = 'this is a game'
+    column.innerHTML = 'this is a game'
     game.append(column)
 }
