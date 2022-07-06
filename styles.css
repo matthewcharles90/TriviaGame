@@ -1,3 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #693417;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .genre-column {
     display: flex;
     flex-direction: column;
