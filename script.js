@@ -10,3 +10,5 @@ function addGenre() {
     column.innerHTML = 'this is a game'
     game.append(column)
 }
+
+addGenre()
