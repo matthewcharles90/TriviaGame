@@ -25,4 +25,5 @@ body {
     text-align: center;
     padding: 5px;
     margin: 10px;
+    border: purple solid 5px;
 }
