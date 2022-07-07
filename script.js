@@ -9,6 +9,9 @@ function addGenre() {
     column.classList.add('genre-column')
     column.innerHTML = 'this is a game'
     game.append(column)
+
+    levels.forEach(level => {
+        fetch()
+    })
 }
 
-addGenre()
