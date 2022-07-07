@@ -15,7 +15,7 @@ function addGenre() {
         card.classList.add('card')
         column.append(card)
 
-        if (level === 'easey') {
+        if (level === 'easy') {
             card.innerHTML = 100
         }
         if (level === 'medium') {
