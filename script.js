@@ -31,6 +31,7 @@ function addGenre() {
             console.log(data)
             card.setAttribute('data-question', data.results[0].question)
             card.setAttribute('data-answer', data.results[0].correct_answer)
+            card.setAttribute('data-value', card.getInnerHTML())
         })
     })
 
