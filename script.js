@@ -11,7 +11,6 @@ function addGenre() {
     game.append(column)
 
     levels.forEach(level => {
-        fetch()
+        fetch(`https://opentdb.com/api.php?amount=1&category=11&difficulty=${level}&type=boolean`)
     })
 }
-
