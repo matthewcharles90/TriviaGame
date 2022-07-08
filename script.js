@@ -63,4 +63,9 @@ genres.forEach(genre => addGenre(genre))
 
 function flipCard() {
     console.log('clicked')
+    const textDisplay = document.createElement('div')
+    const trueButton = document.createElement('button')
+    const falsButton = document.createElement('button')
 }
+
+flipCard();
