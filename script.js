@@ -65,7 +65,10 @@ function flipCard() {
     console.log('clicked')
     const textDisplay = document.createElement('div')
     const trueButton = document.createElement('button')
-    const falsButton = document.createElement('button')
+    const falseButton = document.createElement('button')
+    trueButton.innerHTML = 'True'
+    falseButton.innerHTML = 'False'
+    this.append(textDisplay, trueButton, falseButton)
 }
 
 flipCard();
