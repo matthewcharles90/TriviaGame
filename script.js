@@ -33,8 +33,13 @@ function addGenre() {
             card.setAttribute('data-answer', data.results[0].correct_answer)
             card.setAttribute('data-value', card.getInnerHTML())
         })
+        card.addEventListener('click', flipCard)
     })
 
 }
 
 addGenre()
+
+function flipCard() {
+    console.log('clicked')
+}
