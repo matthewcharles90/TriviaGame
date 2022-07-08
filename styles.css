@@ -11,6 +11,10 @@ body {
 
 }
 
+#game {
+    display: flex;
+}
+
 .genre-column {
     display: flex;
     flex-direction: column;
