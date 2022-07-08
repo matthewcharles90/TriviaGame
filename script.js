@@ -24,7 +24,7 @@ const genres = [
 
 const levels = ['easy', 'medium', 'hard']
 
-function addGenre(genre) {
+function addGenre(genres) {
     const column = document.createElement('div')
     column.classList.add('genre-column')
     column.innerHTML = genres.name
@@ -45,7 +45,7 @@ function addGenre(genre) {
             card.innerHTML = 300
         }
 
-        fetch(`https://opentdb.com/api.php?amount=1&category=${genre.id}&difficulty=${level}&type=boolean`)
+        fetch(`https://opentdb.com/api.php?amount=1&category=${genres.id}&difficulty=${level}&type=boolean`)
             .then(response => response.json())
             .then(data => {
                 console.log(data)
