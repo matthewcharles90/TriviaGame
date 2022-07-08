@@ -3,13 +3,14 @@ const scoreDisplay = document.getElementById('score');
 
 const genres = [
     {
-        name: 'Film',
-        id: 11
-    },
-    {
         name: 'Books',
         id: 10
     },
+    {
+        name: 'Film',
+        id: 11
+    },
+
     {
         name: 'Music',
         id: 12
@@ -40,24 +41,24 @@ function addGenre(genre) {
         if (level === 'medium') {
             card.innerHTML = 200
         }
-        if (level === 'hard'){
+        if (level === 'hard') {
             card.innerHTML = 300
         }
 
         fetch(`https://opentdb.com/api.php?amount=1&category=${genre.id}&difficulty=${level}&type=boolean`)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
-            card.setAttribute('data-question', data.results[0].question)
-            card.setAttribute('data-answer', data.results[0].correct_answer)
-            card.setAttribute('data-value', card.getInnerHTML())
-        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                card.setAttribute('data-question', data.results[0].question)
+                card.setAttribute('data-answer', data.results[0].correct_answer)
+                card.setAttribute('data-value', card.getInnerHTML())
+            })
         card.addEventListener('click', flipCard)
     })
 
 }
 
-addGenre(genres[0])
+genres.forEach(genre => addGenre(genre))
 
 
 function flipCard() {
