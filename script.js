@@ -1,5 +1,6 @@
 const game = document.getElementById('game');
 const scoreDisplay = document.getElementById('score');
+let score = 0;
 
 const genres = [
     {
@@ -68,8 +69,21 @@ function flipCard() {
     const falseButton = document.createElement('button')
     trueButton.innerHTML = 'True'
     falseButton.innerHTML = 'False'
+    trueButton.addEventListener('click', getResult)
+    falseButton.addEventListener('click', getResult)
     textDisplay.innerHTML = this.getAttribute('data-question')
     this.append(textDisplay, trueButton, falseButton)
+    
+
+    //Remove continuous divs
+    const allCards = Array.from(document.querySelectorAll('.card'))
+    allCards.forEach(card => card.removeEventListener('click', flipCard))
 }
 
-flipCard();
+function getResult() {
+    const cardOfButton = this.parentElement
+    if (cardOfButton.getAttribute('data-answer') === this.innerHTML) {
+        score = score + parseInt(cardOfButton.getAttribute('data-value'))
+        scoreDisplay.innerHTML = score
+    }
+}
