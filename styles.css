@@ -30,6 +30,7 @@ body {
     padding: 5px;
     margin: 10px;
     border: purple solid 5px;
+    font-size: 100px;
 }
 
 .correct-answer {
@@ -37,4 +38,16 @@ body {
 }
 .wrong-answer {
     background-color: rgb(181, 35, 30);
+}
+
+.true-button {
+    background-color: #63b36e;
+}
+
+.false-button {
+    background-color: #aa231e;
+}
+
+button {
+    margin: 5px;
 }
