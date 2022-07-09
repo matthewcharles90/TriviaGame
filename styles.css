@@ -31,3 +31,10 @@ body {
     margin: 10px;
     border: purple solid 5px;
 }
+
+.correct-answer {
+    background-color: aquamarine;
+}
+.wrong-answer {
+    background-color: rgb(181, 35, 30);
+}
